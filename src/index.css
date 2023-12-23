@@ -46,6 +46,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-wrap: nowrap;
 }
 
 .error {
@@ -262,10 +263,15 @@ progress {
   .app-header {
     justify-content: center;
     gap: 2.4rem;
+    width: 100%;
   }
 
   h1 {
     font-size: 5rem;
+  }
+
+  .main {
+    width: 100%;
   }
 
   img {
@@ -273,29 +279,23 @@ progress {
   }
 }
 
-@media screen and (max-width: 600px) {
-  html {
-    font-size: 58%;
-  }
-}
-
 @media screen and (max-width: 560px) {
-  body {
-    margin-left: 3rem;
+  .app-header {
+    gap: 1.4rem;
+  }
+
+  h1 {
+    font-size: 4.5rem;
   }
 
   img {
-    width: 10rem;
+    width: 8rem;
   }
 }
 
 @media screen and (max-width: 500px) {
-  body {
-    margin-left: 6rem;
-  }
-
-  img {
-    width: 9rem;
+  .app-header {
+    flex-direction: column;
   }
 
   .btn {
@@ -304,16 +304,6 @@ progress {
 }
 
 @media screen and (max-width: 450px) {
-  html {
-    font-size: 50%;
-  }
-
-  body {
-    margin-left: 9rem;
-
-    min-height: 50vh;
-  }
-
   .btn {
     padding: 1.8rem 2.4rem;
   }
@@ -321,11 +311,7 @@ progress {
 
 @media screen and (max-width: 365px) {
   html {
-    font-size: 40%;
-  }
-
-  body {
-    margin-left: 10rem;
+    font-size: 54%;
   }
 
   .btn {
